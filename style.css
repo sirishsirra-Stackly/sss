@@ -1,72 +1,74 @@
-/* ===== VIDEO SECTION ===== */
-.video-section {
-  text-align: center;
-  padding: 80px 20px;
-  background: #fff;
-  color: #222;
+.footer {
+  background: #041C37;
+  color: white;
+  padding: 70px 8%;
+  font-family: Arial, sans-serif;
 }
 
-.video-section h2 {
-  font-size: 2.8em;
-  margin-bottom: 40px;
-  font-weight: 700;
+/* ⭐ THIS MAKES 4 COLUMNS HORIZONTAL */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  align-items: flex-start;
 }
 
-.video-wrapper {
-  position: relative;
-  width: 80%;
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+.footer-logo {
+  width: 160px;
+  margin-bottom: 20px;
 }
 
-.video-wrapper video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 15px;
-}
-
-/* ===== Overlay Text ===== */
-.overlay-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.3);
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.overlay-text h3 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.overlay-text p {
-  font-size: 1.1em;
-  width: 80%;
+.footer-text {
   line-height: 1.5;
+  opacity: 0.8;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .video-section h2 {
-    font-size: 2em;
-  }
+/* HEADINGS */
+.footer-col h3 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: bold;
+}
 
-  .overlay-text h3 {
-    font-size: 1.4em;
-  }
+/* LIST STYLE */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
 
-  .overlay-text p {
-    font-size: 1em;
+.footer-col ul li {
+  margin: 10px 0;
+  opacity: 0.9;
+  font-size: 17px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.view-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: #3CF2A8;
+  color: #000;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* ⭐ RESPONSIVE FIX */
+@media(max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 }
